@@ -1,0 +1,9 @@
+#acf-services table select,
+#acf-facts table select{
+	font-family: FontAwesome,arial;
+    font-size: 18px;
+    width: 80px;
+}
+.fa{
+font-family: FontAwesome !important;
+}
