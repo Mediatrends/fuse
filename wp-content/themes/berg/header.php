@@ -48,11 +48,17 @@
 			?>
 			
 			<div class="logoContainer <?php echo $logoWrapperClass; ?>">
+
 				<span class="um_helper"></span>
+
         		<?php if(get_field('logo_type','options') == 'text'): ?>
+
         			<h1 class="logo textLogo"><a href="<?php echo site_url(); ?>"><?php the_field('logo_text','options');?></a></h1>
+
         		<?php elseif(get_field('logo_type','options') == 'image'): ?>
+
         			<?php $logoImg = wp_get_attachment_image_src( get_field('logo_image' ,'option'), 'full'); ?>
+
         			<?php if(get_field('retina_logo','options')){
         				$logoW = $logoImg[1] / 2; 
         				$logoH = $logoImg[2] / 2; 
@@ -67,11 +73,14 @@
         			<h1 class="logo textLogo"><a href="<?php echo site_url(); ?>"><?php bloginfo('name');?></a> </h1>
         		<?php endif;?>
     		</div>
+
 			<?php if(get_field('web_site_slogan','options') != ""): ?>
+
             <div class="slug col-md-6 col-xs-12">
                 <span class="um_helper"></span>
     			<h1><?php echo get_field('web_site_slogan','options'); ?></h1>
             </div>
+
 			<?php endif ?>			
         </section>
 		<?php $menu = 'vertical'; 
